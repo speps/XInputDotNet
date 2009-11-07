@@ -1,0 +1,17 @@
+syntax: glob
+*.cachefile
+*.suo
+*.cd
+*.user
+*.ncb
+*.exe
+*.pdb
+*.ilk
+Thumbs.db
+
+syntax: regexp
+Output/
+XInputInterface/Temp/
+XInputDemo/obj
+XInputDotNetPure/obj
+_ReSharper
