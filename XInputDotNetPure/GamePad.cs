@@ -243,6 +243,19 @@ namespace XInputDotNetPure
         internal GamePadState(bool isConnected, RawState rawState, GamePadDeadZone deadZone)
         {
             this.isConnected = isConnected;
+
+            if (!isConnected)
+            {
+                rawState.dwPacketNumber = 0;
+                rawState.Gamepad.dwButtons = 0;
+                rawState.Gamepad.bLeftTrigger = 0;
+                rawState.Gamepad.bRightTrigger = 0;
+                rawState.Gamepad.sThumbLX = 0;
+                rawState.Gamepad.sThumbLY = 0;
+                rawState.Gamepad.sThumbRX = 0;
+                rawState.Gamepad.sThumbRY = 0;
+            }
+
             packetNumber = rawState.dwPacketNumber;
             buttons = new GamePadButtons(
                 (rawState.Gamepad.dwButtons & (uint)ButtonsConstants.Start) != 0 ? ButtonState.Pressed : ButtonState.Released,
