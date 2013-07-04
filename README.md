@@ -26,7 +26,7 @@ Some examples are available in this repository :
 
 * **Binaries/XInputDemo.exe**, small console application for the most simple use of the API
     - Tip : use the triggers to test the vibration
-* **XInputUnity/\***, Unity 4 project rotating a cube with the pad
+* **XInputUnity**, Unity 4 project rotating a cube with the pad, awesome stuff I swear
     - Tip : same tip !
 
 ### Using with Unity
