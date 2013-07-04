@@ -1,12 +1,12 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInputDotNetPure", "XInputDotNetPure\XInputDotNetPure.csproj", "{952700CD-A384-43A4-AC4B-52256F83836E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1967D61A-FB64-463C-BB3C-BB6E90FBC76F} = {1967D61A-FB64-463C-BB3C-BB6E90FBC76F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XInputInterface", "XInputInterface\XInputInterface.vcproj", "{1967D61A-FB64-463C-BB3C-BB6E90FBC76F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XInputInterface", "XInputInterface\XInputInterface.vcxproj", "{1967D61A-FB64-463C-BB3C-BB6E90FBC76F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInputDemo", "XInputDemo\XInputDemo.csproj", "{11D9E8F7-228D-4984-9E45-570AD26BE8A9}"
 EndProject
