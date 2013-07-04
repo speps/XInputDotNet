@@ -9,30 +9,31 @@ C# wrapper around XInput, works with any Mono or .NET application (eg. Unity3D).
 
 ### What is XInput.NET?
 
-XInput.NET is a .NET library which wraps the functions of XInput. It is different from what you can find inside [SlimDX](http://slimdx.org/) for example because it is designed to be pure [CIL](http://en.wikipedia.org/wiki/Common_Intermediate_Language). That means you can use it in [Unity3D](http://unity3d.com/) Free (as well as Pro of course). The API was designed to be very similar to the [GamePad class from XNA](http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.input.gamepad.aspx).
+**XInput.NET** is a .NET library which wraps the functions of XInput. It is different from what you can find inside [SlimDX](http://slimdx.org/) for example because it is designed to be pure [CIL](http://en.wikipedia.org/wiki/Common_Intermediate_Language). That means you can use it in [Unity3D](http://unity3d.com/) Free (as well as Pro of course). The API was designed to be very similar (if not identical) to the [GamePad class from XNA](http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.input.gamepad.aspx).
 
 ### Ready to go !
 
 Pre-built binaries are available in the Binaries folder above :
 
-* XInputDotNetPure.dll, .NET assembly containing the [GamePad](http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.input.gamepad.aspx) class
+* **XInputDotNetPure.dll**, .NET assembly containing the [GamePad](http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.input.gamepad.aspx) class
     - You need to add a reference to this one in your C# project for example
-* XInputInterface.dll, utility DLL which makes the calls to XInput
+* **XInputInterface.dll**, utility DLL which makes the calls to XInput
     - You have to copy this one next to your .exe
 
 ### Examples
 
 Some examples are available in this repository :
 
-* Binaries/XInputDemo.exe, small console application for the most simple use of the API
+* **Binaries/XInputDemo.exe**, small console application for the most simple use of the API
     - Tip : use the triggers to test the vibration
-* XInputUnity/*, Unity 2.5 (can be opened with a later version) project rotating a cube with the pad
+* **XInputUnity/\***, Unity 4 project rotating a cube with the pad
+    - Tip : same tip !
 
 ### Using with Unity
 
 ![Unity](https://raw.github.com/speps/XInputDotNet/master/XInputUnity/Screenshot.jpg)
 
-You can open the XInputUnity from Unity3D to see how it's setup. The main step is to put XInputDotNetPure.dll inside a *Assets/Plugins* folder (you can create it if missing).
+You can open the XInputUnity from Unity3D to see how it's setup. The main step is to put XInputDotNetPure.dll inside a **Assets/Plugins** folder (you can create it if missing).
 
 When make a build in Unity, the XInputInterface.dll file won't be properly copied to the build folder, so you have to copy it yourself in the same folder as the executable of your project.
 
