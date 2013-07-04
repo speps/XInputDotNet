@@ -12,14 +12,6 @@ namespace XInputDotNetPure
         public static extern uint XInputGamePadGetState(uint playerIndex, IntPtr state);
         [DllImport(DLLName)]
         public static extern void XInputGamePadSetState(uint playerIndex, float leftMotor, float rightMotor);
-
-        public enum Constants
-        {
-            Success = 0x000,
-            NotConnected = 0x48F,
-            LeftStickDeadZone = 7849,
-            RightStickDeadZone = 8689
-        }
     }
 
     public enum ButtonState
@@ -276,32 +268,14 @@ namespace XInputDotNetPure
                 (rawState.Gamepad.dwButtons & (uint)ButtonsConstants.DPadRight) != 0 ? ButtonState.Pressed : ButtonState.Released
             );
 
-            switch (deadZone)
-            {
-                case GamePadDeadZone.IndependentAxes:
-                    rawState.Gamepad.sThumbLX = ThumbStickDeadZoneIndependantAxes(rawState.Gamepad.sThumbLX, (short)Imports.Constants.LeftStickDeadZone);
-                    rawState.Gamepad.sThumbLY = ThumbStickDeadZoneIndependantAxes(rawState.Gamepad.sThumbLY, (short)Imports.Constants.LeftStickDeadZone);
-                    rawState.Gamepad.sThumbRX = ThumbStickDeadZoneIndependantAxes(rawState.Gamepad.sThumbRX, (short)Imports.Constants.RightStickDeadZone);
-                    rawState.Gamepad.sThumbRY = ThumbStickDeadZoneIndependantAxes(rawState.Gamepad.sThumbRY, (short)Imports.Constants.RightStickDeadZone);
-                    break;
-            }
-
             thumbSticks = new GamePadThumbSticks(
-                new GamePadThumbSticks.StickValue(
-                    rawState.Gamepad.sThumbLX < 0 ? rawState.Gamepad.sThumbLX / 32768.0f : rawState.Gamepad.sThumbLX / 32767.0f,
-                    rawState.Gamepad.sThumbLY < 0 ? rawState.Gamepad.sThumbLY / 32768.0f : rawState.Gamepad.sThumbLY / 32767.0f),
-                new GamePadThumbSticks.StickValue(
-                    rawState.Gamepad.sThumbRX < 0 ? rawState.Gamepad.sThumbRX / 32768.0f : rawState.Gamepad.sThumbRX / 32767.0f,
-                    rawState.Gamepad.sThumbRY < 0 ? rawState.Gamepad.sThumbRY / 32768.0f : rawState.Gamepad.sThumbRY / 32767.0f)
+                Utils.ApplyLeftStickDeadZone(rawState.Gamepad.sThumbLX, rawState.Gamepad.sThumbLY, deadZone),
+                Utils.ApplyRightStickDeadZone(rawState.Gamepad.sThumbRX, rawState.Gamepad.sThumbRY, deadZone)
             );
-            triggers = new GamePadTriggers(rawState.Gamepad.bLeftTrigger / 255.0f, rawState.Gamepad.bRightTrigger / 255.0f);
-        }
-
-        public static short ThumbStickDeadZoneIndependantAxes(short value, short deadZone)
-        {
-            if (value < 0 && value > -deadZone || value > 0 && value < deadZone)
-                return 0;
-            return value;
+            triggers = new GamePadTriggers(
+                Utils.ApplyTriggerDeadZone(rawState.Gamepad.bLeftTrigger, deadZone),
+                Utils.ApplyTriggerDeadZone(rawState.Gamepad.bRightTrigger, deadZone)
+            );
         }
 
         public uint PacketNumber
@@ -345,6 +319,7 @@ namespace XInputDotNetPure
 
     public enum GamePadDeadZone
     {
+        Circular,
         IndependentAxes,
         None
     }
@@ -361,7 +336,7 @@ namespace XInputDotNetPure
             IntPtr gamePadStatePointer = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(GamePadState.RawState)));
             uint result = Imports.XInputGamePadGetState((uint)playerIndex, gamePadStatePointer);
             GamePadState.RawState state = (GamePadState.RawState)Marshal.PtrToStructure(gamePadStatePointer, typeof(GamePadState.RawState));
-            return new GamePadState(result == (uint)Imports.Constants.Success, state, deadZone);
+            return new GamePadState(result == Utils.Success, state, deadZone);
         }
 
         public static void SetVibration(PlayerIndex playerIndex, float leftMotor, float rightMotor)
