@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XInputInterface", "XInputIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInputDemo", "XInputDemo\XInputDemo.csproj", "{11D9E8F7-228D-4984-9E45-570AD26BE8A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XInputReporter", "XInputReporter\XInputReporter.csproj", "{AE527B52-7BE7-4BC2-8228-E475F65461A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Windows = Debug|Windows
@@ -28,6 +30,10 @@ Global
 		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Debug|Windows.Build.0 = Debug|Any CPU
 		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Release|Windows.ActiveCfg = Release|Any CPU
 		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Release|Windows.Build.0 = Release|Any CPU
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Debug|Windows.Build.0 = Debug|Any CPU
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Release|Windows.ActiveCfg = Release|Any CPU
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Release|Windows.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
