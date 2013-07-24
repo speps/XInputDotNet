@@ -18,22 +18,22 @@ Global
 		Release|Windows = Release|Windows
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{952700CD-A384-43A4-AC4B-52256F83836E}.Debug|Windows.ActiveCfg = Debug|Any CPU
-		{952700CD-A384-43A4-AC4B-52256F83836E}.Debug|Windows.Build.0 = Debug|Any CPU
-		{952700CD-A384-43A4-AC4B-52256F83836E}.Release|Windows.ActiveCfg = Release|Any CPU
-		{952700CD-A384-43A4-AC4B-52256F83836E}.Release|Windows.Build.0 = Release|Any CPU
+		{952700CD-A384-43A4-AC4B-52256F83836E}.Debug|Windows.ActiveCfg = Debug|x86
+		{952700CD-A384-43A4-AC4B-52256F83836E}.Debug|Windows.Build.0 = Debug|x86
+		{952700CD-A384-43A4-AC4B-52256F83836E}.Release|Windows.ActiveCfg = Release|x86
+		{952700CD-A384-43A4-AC4B-52256F83836E}.Release|Windows.Build.0 = Release|x86
 		{1967D61A-FB64-463C-BB3C-BB6E90FBC76F}.Debug|Windows.ActiveCfg = Debug|Win32
 		{1967D61A-FB64-463C-BB3C-BB6E90FBC76F}.Debug|Windows.Build.0 = Debug|Win32
 		{1967D61A-FB64-463C-BB3C-BB6E90FBC76F}.Release|Windows.ActiveCfg = Release|Win32
 		{1967D61A-FB64-463C-BB3C-BB6E90FBC76F}.Release|Windows.Build.0 = Release|Win32
-		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Debug|Windows.ActiveCfg = Debug|Any CPU
-		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Debug|Windows.Build.0 = Debug|Any CPU
-		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Release|Windows.ActiveCfg = Release|Any CPU
-		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Release|Windows.Build.0 = Release|Any CPU
-		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Debug|Windows.ActiveCfg = Debug|Any CPU
-		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Debug|Windows.Build.0 = Debug|Any CPU
-		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Release|Windows.ActiveCfg = Release|Any CPU
-		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Release|Windows.Build.0 = Release|Any CPU
+		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Debug|Windows.ActiveCfg = Debug|x86
+		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Debug|Windows.Build.0 = Debug|x86
+		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Release|Windows.ActiveCfg = Release|x86
+		{11D9E8F7-228D-4984-9E45-570AD26BE8A9}.Release|Windows.Build.0 = Release|x86
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Debug|Windows.ActiveCfg = Debug|x86
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Debug|Windows.Build.0 = Debug|x86
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Release|Windows.ActiveCfg = Release|x86
+		{AE527B52-7BE7-4BC2-8228-E475F65461A5}.Release|Windows.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
