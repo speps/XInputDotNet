@@ -37,7 +37,8 @@ namespace XInputDotNetPure
         {
             if (deadZoneMode == GamePadDeadZone.Circular)
             {
-                float distanceFromCenter = (float)Math.Sqrt(valueX * valueX + valueY * valueY);
+                // Cast to long to avoid int overflow if valueX and valueY are both 32768, which would result in a negative number and Sqrt returns NaN
+                float distanceFromCenter = (float)Math.Sqrt((long)valueX * (long)valueX + (long)valueY * (long)valueY);
                 float coefficient = ApplyDeadZone(distanceFromCenter, short.MaxValue, deadZoneSize);
                 coefficient = coefficient > 0.0f ? coefficient / distanceFromCenter : 0.0f;
                 return new GamePadThumbSticks.StickValue(

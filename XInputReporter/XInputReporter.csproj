@@ -76,40 +76,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\connected_controller1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\select_controller1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\connected_controller2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\select_controller2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\connected_controller3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\select_controller3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\connected_controller4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\select_controller4.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XInputDotNetPure\XInputDotNetPure.csproj">
       <Project>{952700CD-A384-43A4-AC4B-52256F83836E}</Project>
       <Name>XInputDotNetPure</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\con_top_persp1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.png" />
