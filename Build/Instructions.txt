@@ -1,0 +1,32 @@
+XInput.NET - https://github.com/speps/XInputDotNet
+
+C# wrapper around XInput, works with any Mono or .NET application (eg. Unity3D)
+
+Using XInputDotNet.dll
+======================
+
+Visual Studio
+-------------
+
+Right click on the project "References" folder, select "Add Reference". Click on "Browse" and select XInputDotNetPure.dll.
+
+You will also have to copy the right XInputInterface*.dll depending on your target architecture.
+
+Unity3D
+-------
+
+Please use XInputDotNet.unityPackage provided on the website.
+
+
+About examples
+==============
+
+XInputDemo.exe
+--------------
+
+Demonstrates all the different API that is available.
+
+XInputReporter.exe
+------------------
+
+Visual debugging tool to see a controller representation with the current state values.

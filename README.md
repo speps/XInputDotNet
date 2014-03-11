@@ -13,7 +13,7 @@ C# wrapper around XInput, works with any Mono or .NET application (eg. Unity3D).
 
 ### Ready to go !
 
-Pre-built binaries are available in the Binaries folder above :
+Pre-built binaries are available from the [releases tab](https://github.com/speps/XInputDotNet/releases) :
 
 * **XInputDotNetPure.dll**, .NET assembly containing the [GamePad](http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.input.gamepad.aspx) class
     - You need to add a reference to this one in your C# project for example
@@ -24,18 +24,17 @@ Pre-built binaries are available in the Binaries folder above :
 
 Some examples are available in this repository :
 
-* **Binaries/XInputDemo.exe**, small console application for the most simple use of the API
-    - Tip : use the triggers to test the vibration
-* **XInputUnity**, Unity 4 project rotating a cube with the pad, awesome stuff I swear
-    - Tip : same tip !
+* **XInputDemo.exe**, small console application for the most simple use of the API
+* **XInputReporter.exe**, visual debugging aid for seeing the values from the controller
+* **XInputUnity**, Unity 4 project rotating a cube with the pad and changing colors
 
 ### Using with Unity
 
 ![Unity](https://raw.github.com/speps/XInputDotNet/master/XInputUnity/Screenshot.jpg)
 
-You can open the XInputUnity from Unity3D to see how it's setup. The main step is to put XInputDotNetPure.dll inside a **Assets/Plugins** folder (you can create it if missing).
-
-When make a build in Unity, the XInputInterface.dll file won't be properly copied to the build folder, so you have to copy it yourself in the same folder as the executable of your project.
+* Download the latest XInputDotNet.unityPackage from the [releases tab](https://github.com/speps/XInputDotNet/releases)
+* Open the menu Assets > Import Package > Custom Package and select the package you just downloaded
+* See XInputTestCS.cs for a basic usage example
 
 ### Notes
 

@@ -24,6 +24,7 @@
 *.xcuserdata
 *.xcuserdatad
 *.orig
+*.meta
 obj/
 Binaries/
 XInputUnity/Library/
