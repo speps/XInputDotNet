@@ -32,9 +32,15 @@ Some examples are available in this repository :
 
 ![Unity](https://raw.github.com/speps/XInputDotNet/master/XInputUnity/Screenshot.jpg)
 
-* Download the latest XInputDotNet.unityPackage from the [releases tab](https://github.com/speps/XInputDotNet/releases)
+* Download the latest `XInputDotNet.unityPackage` from the [releases tab](https://github.com/speps/XInputDotNet/releases)
 * Open the menu Assets > Import Package > Custom Package and select the package you just downloaded
 * See XInputTestCS.cs for a basic usage example
+
+#### <a name="free"></a>Special instructions for Free version of Unity
+
+* Import the .unityPackage as described above
+* Copy `[Project Folder]\Assets\Plugins\x86\XInputInterface.dll` to `[Project Folder]\XInputInterface.dll`
+* **Making a Build does NOT require to copy `XInputInterface.dll` in the same folder the your game .exe file**
 
 ### Notes
 
