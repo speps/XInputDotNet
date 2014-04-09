@@ -336,6 +336,7 @@ namespace XInputDotNetPure
             IntPtr gamePadStatePointer = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(GamePadState.RawState)));
             uint result = Imports.XInputGamePadGetState((uint)playerIndex, gamePadStatePointer);
             GamePadState.RawState state = (GamePadState.RawState)Marshal.PtrToStructure(gamePadStatePointer, typeof(GamePadState.RawState));
+            Marshal.FreeHGlobal(gamePadStatePointer);
             return new GamePadState(result == Utils.Success, state, deadZone);
         }
 
