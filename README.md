@@ -42,6 +42,10 @@ Some examples are available in this repository :
 * Copy `[Project Folder]\Assets\Plugins\x86\XInputInterface.dll` to `[Project Folder]\XInputInterface.dll`
 * **Making a Build does NOT require to copy `XInputInterface.dll` in the same folder the your game .exe file**
 
+**NOTE** : you may see this error message but it should still work as expected, the message won't appear in a Build
+
+![License Error Message](https://raw.github.com/speps/XInputDotNet/master/XInputUnity/LicenseError.jpg)
+
 ### Notes
 
 * Under Windows XP, you'll need special drivers for your Xbox 360 Controller. You can find them at this address : [XBox 360 Controller for Windows Software](http://www.microsoft.com/en-us/download/details.aspx?id=34001)

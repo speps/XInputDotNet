@@ -62,6 +62,7 @@
             this.timerStart = new System.Windows.Forms.Timer(this.components);
             this.picStickLeft = new System.Windows.Forms.PictureBox();
             this.picStickRight = new System.Windows.Forms.PictureBox();
+            this.checkGuide = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.picController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picController2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picController3)).BeginInit();
@@ -411,12 +412,24 @@
             this.picStickRight.TabIndex = 33;
             this.picStickRight.TabStop = false;
             // 
+            // checkGuide
+            // 
+            this.checkGuide.AutoSize = true;
+            this.checkGuide.BackColor = System.Drawing.Color.Transparent;
+            this.checkGuide.Enabled = false;
+            this.checkGuide.Location = new System.Drawing.Point(293, 263);
+            this.checkGuide.Name = "checkGuide";
+            this.checkGuide.Size = new System.Drawing.Size(15, 14);
+            this.checkGuide.TabIndex = 34;
+            this.checkGuide.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::XInputReporter.Properties.Resources.background1;
             this.ClientSize = new System.Drawing.Size(849, 472);
+            this.Controls.Add(this.checkGuide);
             this.Controls.Add(this.picStickRight);
             this.Controls.Add(this.picStickLeft);
             this.Controls.Add(this.label1);
@@ -500,6 +513,7 @@
         private System.Windows.Forms.Timer timerStart;
         private System.Windows.Forms.PictureBox picStickLeft;
         private System.Windows.Forms.PictureBox picStickRight;
+        private System.Windows.Forms.CheckBox checkGuide;
     }
 }
 

@@ -44,13 +44,15 @@ namespace XInputReporter
                 }
             }
 
-            GamePad.SetVibration(playerIndices[lastActivePlayerIndex], 0.0f, 0.0f);
-
             lastActivePlayerIndex = activePlayerIndex;
 
             if (LinkTriggersToVibration)
             {
                 GamePad.SetVibration(playerIndices[lastActivePlayerIndex], LastActiveState.Triggers.Left, LastActiveState.Triggers.Right);
+            }
+            else
+            {
+                GamePad.SetVibration(playerIndices[lastActivePlayerIndex], 0.0f, 0.0f);
             }
 
             return changed;
