@@ -73,12 +73,22 @@ namespace
 DWORD XInputGamePadGetState(DWORD dwUserIndex, XINPUT_STATE* pState)
 {
 	gXInputLoader.ensureLoaded();
-	return gXInputLoader.mGetState(dwUserIndex, pState);
+	if(gXInputLoader.mGetState != NULL)
+	{
+		return gXInputLoader.mGetState(dwUserIndex, pState);
+	}
+	else
+	{
+		return ERROR_DEVICE_NOT_CONNECTED;
+	}
 }
 
 void XInputGamePadSetState(DWORD dwUserIndex, float leftMotor, float rightMotor)
 {
 	gXInputLoader.ensureLoaded();
-	XINPUT_VIBRATION vibration = { (int)(leftMotor * 65535), (int)(rightMotor * 65535) };
-	gXInputLoader.mSetState(dwUserIndex, &vibration);
+	if(gXInputLoader.mSetState != NULL)
+	{
+		XINPUT_VIBRATION vibration = { (int)(leftMotor * 65535), (int)(rightMotor * 65535) };
+		gXInputLoader.mSetState(dwUserIndex, &vibration);
+	}
 }
