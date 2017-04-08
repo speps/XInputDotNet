@@ -30,7 +30,7 @@ Some examples are available in this repository :
 
 ### Using with Unity
 
-![Unity](https://raw.github.com/speps/XInputDotNet/master/XInputUnity/Screenshot.jpg)
+![Unity](https://raw.github.com/speps/XInputDotNet/master/Screenshot.jpg)
 
 * Download the latest `XInputDotNet.unityPackage` from the [releases tab](https://github.com/speps/XInputDotNet/releases)
 * Open the menu Assets > Import Package > Custom Package and select the package you just downloaded
@@ -44,7 +44,7 @@ Some examples are available in this repository :
 
 **NOTE** : you may see this error message but it should still work as expected, the message won't appear in a Build
 
-![License Error Message](https://raw.github.com/speps/XInputDotNet/master/XInputUnity/LicenseError.jpg)
+![License Error Message](https://raw.github.com/speps/XInputDotNet/master/LicenseError.jpg)
 
 ### Notes
 
