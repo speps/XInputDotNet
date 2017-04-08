@@ -36,6 +36,16 @@ Some examples are available in this repository :
 * Open the menu Assets > Import Package > Custom Package and select the package you just downloaded
 * See XInputTestCS.cs for a basic usage example
 
+### Building errors
+
+#### error CS1704: An assembly with the same name `XInputDotNetPure' has already been imported.
+
+If you get this error, or a similar one, make sure the settings for each architecture matches the settings below.
+
+![Plugin settings for x86 DLLs](https://raw.github.com/speps/XInputDotNet/master/SettingsX86.jpg)
+
+![Plugin settings for x86_64 DLLs](https://raw.github.com/speps/XInputDotNet/master/SettingsX64.jpg)
+
 #### <a name="free"></a>Special instructions for Free version of Unity
 
 * Import the .unityPackage as described above
