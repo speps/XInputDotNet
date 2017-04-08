@@ -1,12 +1,12 @@
 @echo off
 setlocal
 
-set _msbuildpath=C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe
+call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsMSBuildCmd.bat"
 
-"%_msbuildpath%" ..\XInputDotNetPure.sln /t:Clean /p:Configuration=Release /p:Platform=x86
-"%_msbuildpath%" ..\XInputDotNetPure.sln /t:Clean /p:Configuration=Release /p:Platform=x64
+MSBuild.exe ..\XInputDotNetPure.sln /t:Clean /p:Configuration=Release /p:Platform=x86
+MSBuild.exe ..\XInputDotNetPure.sln /t:Clean /p:Configuration=Release /p:Platform=x64
 
-"%_msbuildpath%" ..\XInputDotNetPure.sln /t:Build /p:Configuration=Release /p:Platform=x86
-"%_msbuildpath%" ..\XInputInterface\XInputInterface.vcxproj /t:Build /p:Configuration=Release /p:Platform=Win32
+MSBuild.exe ..\XInputDotNetPure.sln /t:Build /p:Configuration=Release /p:Platform=x86
+MSBuild.exe ..\XInputInterface\XInputInterface.vcxproj /t:Build /p:Configuration=Release /p:Platform=Win32
 
-"%_msbuildpath%" ..\XInputDotNetPure.sln /t:Build /p:Configuration=Release /p:Platform=x64
+MSBuild.exe ..\XInputDotNetPure.sln /t:Build /p:Configuration=Release /p:Platform=x64

@@ -88,7 +88,9 @@ void XInputGamePadSetState(DWORD dwUserIndex, float leftMotor, float rightMotor)
 	gXInputLoader.ensureLoaded();
 	if(gXInputLoader.mSetState != NULL)
 	{
-		XINPUT_VIBRATION vibration = { (int)(leftMotor * 65535), (int)(rightMotor * 65535) };
+		leftMotor = leftMotor < 0.0f ? 0.0f : (leftMotor > 1.0f ? 1.0f : leftMotor);
+		rightMotor = rightMotor < 0.0f ? 0.0f : (rightMotor > 1.0f ? 1.0f : rightMotor);
+		XINPUT_VIBRATION vibration = { (WORD)(leftMotor * 65535), (WORD)(rightMotor * 65535) };
 		gXInputLoader.mSetState(dwUserIndex, &vibration);
 	}
 }

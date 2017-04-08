@@ -1,4 +1,3 @@
-*.dll
 *.exe
 *.ipch
 *.sdf
@@ -24,9 +23,10 @@
 *.xcuserdata
 *.xcuserdatad
 *.orig
-*.meta
 *.unityPackage
 obj/
-Binaries/
-XInputUnity/Library/
+BinariesX86/
+BinariesX64/
+XInputUnity4/Library/
+XInputUnity5/Library/
 Temp/
