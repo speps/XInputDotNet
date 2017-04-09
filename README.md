@@ -48,6 +48,8 @@ If you get this error, or a similar one, make sure the settings for each archite
 
 #### <a name="free"></a>Special instructions for Free version of Unity
 
+NOTE: this is needed only for Unity 4, Unity 5 seems to have the right behaviour
+
 * Import the .unityPackage as described above
 * Copy `[Project Folder]\Assets\Plugins\x86\XInputInterface.dll` to `[Project Folder]\XInputInterface.dll`
 * **Making a Build does NOT require to copy `XInputInterface.dll` in the same folder the your game .exe file**
