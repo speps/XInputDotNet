@@ -23,7 +23,7 @@ PluginImporter:
           Exclude OSXIntel: 1
           Exclude OSXIntel64: 1
           Exclude OSXUniversal: 1
-          Exclude Win: 1
+          Exclude Win: 0
           Exclude Win64: 0
     data:
       first:
@@ -31,7 +31,7 @@ PluginImporter:
       second:
         enabled: 0
         settings:
-          CPU: x86_64
+          CPU: AnyCPU
           OS: Windows
     data:
       first:
@@ -61,7 +61,7 @@ PluginImporter:
       second:
         enabled: 0
         settings:
-          CPU: None
+          CPU: AnyCPU
     data:
       first:
         Facebook: Win64
@@ -115,9 +115,9 @@ PluginImporter:
       first:
         Standalone: Win
       second:
-        enabled: 0
+        enabled: 1
         settings:
-          CPU: None
+          CPU: AnyCPU
     data:
       first:
         Standalone: Win64

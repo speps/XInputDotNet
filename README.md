@@ -40,11 +40,16 @@ Some examples are available in this repository :
 
 #### error CS1704: An assembly with the same name `XInputDotNetPure' has already been imported.
 
-If you get this error, or a similar one, make sure the settings for each architecture matches the settings below.
+If you get this error, or a similar one, make sure the settings for each file matches the settings below.
 
+For `Plugins\x86\XInputInterface.dll`
 ![Plugin settings for x86 DLLs](https://raw.github.com/speps/XInputDotNet/master/SettingsX86.jpg)
 
+For `Plugins\x86_64\XInputInterface.dll`
 ![Plugin settings for x86_64 DLLs](https://raw.github.com/speps/XInputDotNet/master/SettingsX64.jpg)
+
+For `Plugins\XInputDotNetPure.dll`
+![Plugin settings for AnyCPU DLLs](https://raw.github.com/speps/XInputDotNet/master/SettingsAnyCPU.jpg)
 
 #### <a name="free"></a>Special instructions for Free version of Unity
 
