@@ -3,8 +3,8 @@
 
 namespace
 {
-	typedef DWORD (*XInputGetStatePointer)(DWORD dwUserIndex, XINPUT_STATE* pState);
-	typedef DWORD (*XInputSetStatePointer)(DWORD dwUserIndex, XINPUT_VIBRATION* pVibration);
+    typedef DWORD( WINAPI *XInputGetStatePointer )( DWORD dwUserIndex, XINPUT_STATE *pState );
+    typedef DWORD( WINAPI *XInputSetStatePointer )( DWORD dwUserIndex, XINPUT_VIBRATION *pVibration );
 
 	class XInputLoader
 	{
